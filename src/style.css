@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./images/bg-image.jpg");
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 200px;
+}
+
+.restaurant-name {
+    color: white;
+    font-size: 50px;
+}
+
+.nav-item {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    /* padding: 2px 20px; */
+    margin: 2px 20px;
+}
+
+.nav-item:hover {
+    border: none;
+    color: white;
+    transform: scale(1.8);
+    cursor: pointer;
+}
