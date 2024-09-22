@@ -7,7 +7,7 @@ function createHeader() {
     document.querySelector("#content").appendChild(headerElement);
     
     let restaurantName = document.createElement("h1");
-    restaurantName.textContent = "Rest-o-rant";
+    restaurantName.textContent = "Best-o-rant";
     restaurantName.classList.add("restaurant-name");
 
     headerElement.appendChild(restaurantName);
@@ -65,7 +65,31 @@ function createTagLine() {
     contentDiv.appendChild(homeDiv);
 }
 
+function createFooter() {
+    const contentDiv = document.querySelector("#content");
+
+    const footer = document.createElement("footer");
+    footer.classList.add("footer");
+
+    const footerText = document.createElement("p");
+    footerText.classList.add("footer-text");
+    footerText.textContent = "Made with ❤️ by Shivam Bansal";
+
+    const githubLink = document.createElement("a");
+    githubLink.setAttribute("target", "_blank");
+    githubLink.href = "https://github.com/shivam-bansal1";
+
+    const githubIcon = document.createElement('i');  // Create <i> element
+    githubIcon.classList.add('fab', 'fa-github');  
+
+    githubLink.appendChild(githubIcon);
+    footer.appendChild(footerText);
+    footer.appendChild(githubLink);
+    contentDiv.appendChild(footer);
+}
+
 export function createHomePage() {
     createHeader();
     createTagLine();
+    createFooter();
 }

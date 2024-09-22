@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const loader = require("css-loader");
 
 module.exports = {
     mode: "development",
@@ -34,6 +35,13 @@ module.exports = {
             {
                 test: /\.html$/i,
                 loader: "html-loader",
+            },
+            {
+                test: /\.(svg|eot|woff|woff2|ttf)$/i,
+                loader: "file-loader",
+                options: {
+                    outputPath: "fonts/",
+                },
             },
         ],
     },
