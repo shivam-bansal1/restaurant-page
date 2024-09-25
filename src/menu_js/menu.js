@@ -1,9 +1,11 @@
 import "../css/general.css";
 import "../css/menu.css";
 import { loadStartersMenu } from "./starters";
+import { loadMainCourseMenu } from "./main_course";
 
 function menuSection() {
-    loadStartersMenu();
+    // loadStartersMenu();
+    loadMainCourseMenu();
 }
 
 function createMenuNav() {
