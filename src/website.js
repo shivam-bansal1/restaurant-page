@@ -1,6 +1,7 @@
 import "./css/general.css";
 import { loadHomePage } from "./home"
 import { loadMenuPage } from "./menu_js/menu";
+import { loadContactPage } from "./contact";
 
 function createHeader() {
     const headerElement = document.createElement("header");
@@ -22,26 +23,23 @@ function createHeaderNav() {
     const homeButton = document.createElement("button");
     homeButton.textContent = "Home";
     homeButton.classList.add("nav-item");
+    homeButton.setAttribute("id", "home-button");
 
 
     // Menu button
     const menuButton = document.createElement("button");
     menuButton.textContent = "Menu";
     menuButton.classList.add("nav-item");
-
-    // About button
-    const aboutButton = document.createElement("button");
-    aboutButton.textContent = "About";
-    aboutButton.classList.add("nav-item");
+    menuButton.setAttribute("id", "menu-button");
 
     // Contact button
     const contactButton = document.createElement("button");
     contactButton.textContent = "Contact";
     contactButton.classList.add("nav-item");
+    contactButton.setAttribute("id", "contact-button");
     
     nav.appendChild(homeButton);
     nav.appendChild(menuButton);
-    nav.appendChild(aboutButton);
     nav.appendChild(contactButton);
 
     return nav;
@@ -73,6 +71,7 @@ function createFooter() {
 export function renderWebsite() {
     createHeader();
     // loadHomePage();
-    loadMenuPage();
+    // loadMenuPage();
+    loadContactPage();
     createFooter();
 }

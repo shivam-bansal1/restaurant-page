@@ -1,0 +1,29 @@
+/*  Home Page */
+.contact {
+    width: 780px;
+    height: auto;
+
+    background-color: var(--background-dark);
+    padding: 40px;
+
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: 50px 50px 1fr;
+}
+
+.contact-number, 
+.address {
+    color: var(--font-color);
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.fa-hotel,
+.fa-phone {
+    font-size: 1.2rem;
+    color: var(--font-color);
+}
+
+.map {
+    width: 700px;
+}
