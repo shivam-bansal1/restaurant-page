@@ -1,0 +1,55 @@
+.menu-navbar-item {
+    color: white;
+    background-color: var(--background-dark);
+    padding: 14px 36px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-navbar-item:hover {
+    background-color: var(--background-gray);
+    transition: 0.3s;
+}
+
+.menu-container {
+    background-color: var(--background-light);
+    padding: 40px;
+    width: 840px;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.dish-container {
+    background-color: var(--background-dark);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dish-container:hover {
+    background-color: var(--background-light-hover);
+    transition: 0.5s;
+}
+
+.dish-img {
+    height: 200px;
+    width: 300px;
+    margin-bottom: 14px;
+}
+
+.dish-name,
+.dish-info {
+    color: var(--font-color);
+}
+
+.dish-info {
+    padding: 8px 16px;
+}

@@ -1,0 +1,8 @@
+export { default as veg_momos } from "./veg_momos.png"
+export { default as crispy_chilli_potato } from "./crispy_chilli_potato.png"
+export { default as gol_gappe } from "./gol_gappe.png"
+export { default as pav_bhaji } from "./pav_bhaji.jpg"
+export { default as veg_fried_rice } from "./veg_fried_rice.jpeg"
+export { default as tandoori_afghani_chaap } from "./tandoori_afghani_chaap.jpg"
+export { default as tandoori_malai_chaap } from "./tandoori_malai_chaap.jpg"
+export { default as veg_noodles } from "./veg_noodles.jpg"

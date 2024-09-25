@@ -1,6 +1,9 @@
 :root {
     --background-dark: rgba(0, 0, 0, 0.8);
-    --font-color : #eee;
+    --background-light: rgba(0, 0, 0, 0.6);
+    --background-light-hover: rgba(99, 99, 99, 0.4);
+    --background-gray: #707070;
+    --font-color : #efefefec;
 }
 
 * {
@@ -10,7 +13,7 @@
 }
 
 body {
-    background-image: url("./images/home-bg-image.jpg");
+    background-image: url("../images/home-bg-image.jpg");
     background-size: cover;
 }
 
@@ -19,7 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    row-gap: 50px;
 }
 
 
@@ -90,32 +93,5 @@ a:active {
 }
 
 .fa-github:hover {
-    color: #aaa;
-}
-
-/*  Home Page */
-.home {
-    width: 700px;
-    height: 500px;
-
-    background-color: var(--background-dark);
-    padding: 40px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.homepage-quote {
-    color: var(--font-color);
-    font-size: 30px;
-    margin-bottom: 30px;
-}
-
-.home-image {
-    height: 400px;
-    width: 400px;
-
-    border-radius: 50%;
-    object-fit: cover;
+    color: var(--background-gray);
 }
