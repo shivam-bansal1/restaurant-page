@@ -1,9 +1,7 @@
 export const starterItems = [
     {
-        "id": 1,
         "tag": "starter",
         "name": "Veg_Momos",
-        "price": "140",
         "description": "Dumpling made from plain flour and filled with either panner or vegetables. Served with zingy chutney"
     },
     {
@@ -46,10 +44,8 @@ export const starterItems = [
 
 export const mainCourseItems = [
     {
-        "id": 1,
         "tag": "main_course",
         "name": "Dal_Makhani",
-        "price": "140",
         "description": "Whole black lentils and red kidney beans that are slow-cooked with cream, butter, and spices",
     },
     {
@@ -86,5 +82,48 @@ export const mainCourseItems = [
         "tag": "main_course",
         "name": "Jeera_Rice",
         "description": "Basmati rice along with whole spices and tempered with cumin seeds and green chilies"
+    },
+];
+
+export const sweetsItems = [
+    {
+        "tag": "sweet",
+        "name": "Rabri",
+        "description": "Thick pudding-like consistency, flavored with cardamoms, saffron, nuts and dried fruits",
+    },
+    {
+        "tag": "sweet",
+        "name": "Rasmalai",
+        "description": "Creamy, dreamy dessert that absolutely melts in your mouth.",
+    },
+    {
+        "tag": "sweet",
+        "name": "Rasgulla",
+        "description": "Cottage cheese (chenna) balls, simmered in a fragrant sugar syrup"
+    },
+    {
+        "tag": "sweet",
+        "name": "Malpua",
+        "description": "Combination of maida, milk, banana, grated coconut, cashew nut, raisin, sugar, water and green cardamon and fried in ghee."
+    },
+    {
+        "tag": "sweet",
+        "name": "Moong_Dal_Halwa",
+        "description": "Rich and decadent Indian dessert made with moong lentils, ghee, milk, sugar, fragrant flavorings and nuts"
+    },
+    {
+        "tag": "sweet",
+        "name": "Gajar_Halwa",
+        "description": "Quintessential winter dessert especially in North India"
+    },
+    {
+        "tag": "sweet",
+        "name": "Kulfi",
+        "description": "Denser and creamier than ice cream, that comes in myriad exotic flavors"
+    },
+    {
+        "tag": "sweet",
+        "name": "Kulfi_Faluda",
+        "description": "Kulfi topped with falooda sev, sabja seeds (sweet basil seeds), rose syrup and nuts"
     },
 ];

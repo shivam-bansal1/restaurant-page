@@ -22,37 +22,32 @@ const menuImage = {
 };
 
 function createMainCourseMenu() {
-    const contentDiv = document.querySelector("#content");
-        const menuContainer = document.createElement("div");
-        menuContainer.classList.add("menu-container");
+    const menuContainer = document.querySelector(".menu-container");
+    
+    mainCourseItems.forEach((starter) => {
+        const dishContainerDiv = document.createElement("div");
+        dishContainerDiv.classList.add("dish-container");
+
+        // Dish Image
+        const dishImage = document.createElement("img");
+        dishImage.classList.add("dish-img");
+        dishImage.src = menuImage[starter.name.toLowerCase()];
+        dishContainerDiv.appendChild(dishImage);
+
+        // Dish Info
+        const dishName = document.createElement("h2");
+        dishName.textContent = starter.name.replaceAll("_", " ");
+        dishName.classList.add("dish-name");
+        dishContainerDiv.appendChild(dishName);
+
+        // Dish Info
+        const dishInfo = document.createElement("p");
+        dishInfo.textContent = starter.description;
+        dishInfo.classList.add("dish-info");
+        dishContainerDiv.appendChild(dishInfo);
         
-        mainCourseItems.forEach((starter) => {
-            const dishContainerDiv = document.createElement("div");
-            dishContainerDiv.classList.add("dish-container");
-
-            // Dish Image
-            const dishImage = document.createElement("img");
-            dishImage.classList.add("dish-img");
-            console.log(starter);
-            dishImage.src = menuImage[starter.name.toLowerCase()];
-            dishContainerDiv.appendChild(dishImage);
-
-            // Dish Info
-            const dishName = document.createElement("h2");
-            dishName.textContent = starter.name.replaceAll("_", " ");
-            dishName.classList.add("dish-name");
-            dishContainerDiv.appendChild(dishName);
-
-            // Dish Info
-            const dishInfo = document.createElement("p");
-            dishInfo.textContent = starter.description;
-            dishInfo.classList.add("dish-info");
-            dishContainerDiv.appendChild(dishInfo);
-            
-            menuContainer.appendChild(dishContainerDiv);
-        });
-        
-        contentDiv.appendChild(menuContainer);
+        menuContainer.appendChild(dishContainerDiv);
+    });
 }
 
 export function loadMainCourseMenu() {

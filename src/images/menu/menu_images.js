@@ -17,3 +17,14 @@ export { default as shahi_paneer } from "./shahi_paneer.png"
 export { default as paneer_butter_masala } from "./paneer_butter_masala.png"
 export { default as jeera_rice } from "./jeera_rice.jpg"
 export { default as matar_mushroom } from "./matar_mushroom.jpg"
+
+
+// Main Course
+export { default as gajar_halwa } from "./gajar_halwa.jpg"
+export { default as kulfi_faluda } from "./kulfi_faluda.jpg"
+export { default as kulfi } from "./kulfi.jpg"
+export { default as malpua } from "./malpua.jpg"
+export { default as moong_dal_halwa } from "./moong_dal_halwa.jpg"
+export { default as rabri } from "./rabri.jpg"
+export { default as rasgulla } from "./rasgulla.jpg"
+export { default as rasmalai } from "./rasmalai.jpg"
