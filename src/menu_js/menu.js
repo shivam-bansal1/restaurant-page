@@ -5,11 +5,14 @@ import { loadMainCourseMenu } from "./main_course";
 import { loadSweetsMenu } from "./sweets";
 
 function menuSection() {
-    const contentDiv = document.querySelector("#content");
+    const mainDiv = document.querySelector(".main");
+    // mainDiv.textContent = "";
+
     const menuContainer = document.createElement("div");
     menuContainer.classList.add("menu-container");
-    contentDiv.appendChild(menuContainer);
+    mainDiv.appendChild(menuContainer);
 
+    // Initial render
     loadStartersMenu();
 
     document.querySelector("#starters")
@@ -61,10 +64,11 @@ function createMenuNav() {
 }
 
 function menuBar() {
-    const contentDiv = document.querySelector("#content");
+    const mainDiv = document.querySelector(".main");
+    mainDiv.textContent = "";
     const menuNav = createMenuNav();
     menuNav.classList.add("menu-navbar");
-    contentDiv.appendChild(menuNav);
+    mainDiv.appendChild(menuNav);
 }
 
 export function loadMenuPage() {

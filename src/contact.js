@@ -3,7 +3,8 @@ import "./css/contact.css";
 import picture from "./images/map.png"
 
 export function loadContactPage() {
-    const contentDiv = document.querySelector("#content");
+    const mainDiv = document.querySelector("#main");
+    mainDiv.textContent = "";
 
     const contactDiv = document.createElement("div");
     contactDiv.classList.add("contact");
@@ -34,5 +35,5 @@ export function loadContactPage() {
     mapImage.classList.add("map");
     contactDiv.appendChild(mapImage);
 
-    contentDiv.appendChild(contactDiv);
+    mainDiv.appendChild(contactDiv);
 }

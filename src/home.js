@@ -3,7 +3,8 @@ import "./css/home.css";
 import picture from "./images/chef-image.jpg"
 
 export function loadHomePage() {
-    const contentDiv = document.querySelector("#content");
+    const mainDiv = document.querySelector("#main");
+    mainDiv.textContent = "";
 
     const homeDiv = document.createElement("div");
     homeDiv.classList.add("home");
@@ -18,5 +19,5 @@ export function loadHomePage() {
     homePageImage.classList.add("home-image");
     homeDiv.appendChild(homePageImage);
 
-    contentDiv.appendChild(homeDiv);
+    mainDiv.appendChild(homeDiv);
 }

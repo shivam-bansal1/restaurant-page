@@ -4,16 +4,17 @@ import { loadMenuPage } from "./menu_js/menu";
 import { loadContactPage } from "./contact";
 
 function createHeader() {
-    const headerElement = document.createElement("header");
-    headerElement.classList.add("header");
-    document.querySelector("#content").appendChild(headerElement);
+    const header = document.createElement("header");
+    header.classList.add("header");
     
     let restaurantName = document.createElement("h1");
     restaurantName.textContent = "Best-o-rant";
     restaurantName.classList.add("restaurant-name");
 
-    headerElement.appendChild(restaurantName);
-    headerElement.appendChild(createHeaderNav());
+    header.appendChild(restaurantName);
+    header.appendChild(createHeaderNav());
+
+    return header
 }
 
 function createHeaderNav() {
@@ -46,7 +47,6 @@ function createHeaderNav() {
 }
 
 function createFooter() {
-    const contentDiv = document.querySelector("#content");
 
     const footer = document.createElement("footer");
     footer.classList.add("footer");
@@ -59,19 +59,45 @@ function createFooter() {
     githubLink.setAttribute("target", "_blank");
     githubLink.href = "https://github.com/shivam-bansal1";
 
-    const githubIcon = document.createElement('i');  // Create <i> element
+    const githubIcon = document.createElement('i');  
     githubIcon.classList.add('fab', 'fa-github');  
 
     githubLink.appendChild(githubIcon);
     footer.appendChild(footerText);
     footer.appendChild(githubLink);
-    contentDiv.appendChild(footer);
+
+    return footer
+}
+
+
+function createMainDiv() {
+    const main = document.createElement("main");
+    main.classList.add("main");
+    main.setAttribute("id", "main");
+    return main;
 }
 
 export function renderWebsite() {
-    createHeader();
-    // loadHomePage();
-    // loadMenuPage();
-    loadContactPage();
-    createFooter();
+    // Intial render
+    const contentDiv = document.querySelector("#content");
+    contentDiv.appendChild(createHeader());
+    contentDiv.appendChild(createMainDiv());
+    contentDiv.appendChild(createFooter());
+    loadHomePage();
+
+
+    document.querySelector("#home-button")
+        .addEventListener("click", () => { 
+            loadHomePage();
+    });
+
+    document.querySelector("#menu-button")
+        .addEventListener("click", () => { 
+            loadMenuPage();
+    });
+
+    document.querySelector("#contact-button")
+        .addEventListener("click", () => { 
+            loadContactPage();
+    });    
 }

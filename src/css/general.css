@@ -17,12 +17,13 @@ body {
     background-size: cover;
 }
 
-#content {
+#main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     row-gap: 50px;
+    padding: 40px 10px;
 }
 
 
